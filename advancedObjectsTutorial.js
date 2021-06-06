@@ -71,3 +71,17 @@ console.log(clone2);
 == is type coercion for example 1=='1' js is going to transform a value to be equal
 === is equal 
 object.is(-0,+0) is pretty much like === expept in few cases
+
+//ES7
+'hello'.includes('o'); //console = true
+
+cost pets =['cat','dog','bat'];
+pets.includes('dog') //console = true
+
+
+//Exponential operator
+
+const square = (x) => x**2
+square(2) = 4 //console
+const cube = (y) => y**3
+cube(4) = 64 //console
