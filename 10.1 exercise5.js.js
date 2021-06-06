@@ -33,25 +33,13 @@ const array = [
 
 //Create an array using forEach that has all the usernames with a "!" to each of the usernames
 
-
-const array = [1, 2, 3];
-
-const double =[]
-
-const newArray = array.forEach((num) => {
-    double.push(num * 2);
-
-})
-console.log('forEach', double);
-
 //solution
 
-
-const newArray = array.forEach((e) => {
-  if (e.username) e.username = e.username + '!'
-  return e
-});
-console.log(newArray);
+const added = []
+const newArray = array.forEach((e) =>{
+added.push(e.username + '!');
+})
+console.log(added)
 
 //Create an array using map that has all the usernames with a "? to each of the usernames
 
@@ -59,17 +47,21 @@ console.log(newArray);
 //solution
 
 const mapArray = array.map((e) => {
-  if (e.username) e.username = e.username + '?'
+  if (e.username) e.username = e.username + '?' 
   return e
 } );
 
 //same simplified
-const mapArray=array.map((e) => e.username =e.username + '?')
+const mapArray=array.map((e) => e.username = e.username + '?')
 
 console.log(array, mapArray)
 
 
 //Filter the array to only include users who are on team: red
+
+const filterArray = array.filter((e) => e.team === 'red');
+
+console.log('filter', filterArray);
 
 
 //Find out the total score of all users using reduce
