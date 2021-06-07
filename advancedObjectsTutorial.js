@@ -85,3 +85,141 @@ const square = (x) => x**2
 square(2) = 4 //console
 const cube = (y) => y**3
 cube(4) = 64 //console
+
+//ES8
+// String padding
+.padStart()
+.padEnd()
+//console
+'turtle'.padStart(10);
+//  we get turtle with 10 spaces after it
+
+//trailing commas in function's parameter list ad calls
+//is a sintaxins, just make things look a litle bit nicer
+const fun = (
+    a,
+    b,
+    c,
+    d, //allways with a coma
+    ) => {
+    console.log(a)
+}
+fun(1,2,3,4,) 
+
+//objects by value
+objects.value
+objects.entries
+//they are susesors of objeck.key
+
+
+
+let obj ={
+    username0: 'santa',
+    username1: 'rudolf',
+    username2: 'mr. grinch',
+}
+//now, it work like an array (but it's an object)
+
+//old way: 
+
+Object.keys(obj).forEach((key, index) => {
+    console.log(key, obj[key]);
+})
+
+//Object.values -- we get the values of the objects
+
+Object.values(obj).forEach(value =>{
+    console.log(value);
+})
+
+//entries -- we get an array in console
+Object.entries(obj).forEach(value =>{
+    console.log(value);
+})
+
+//real life escenario
+//we recieve tthe next info from the backend:
+
+let obj ={
+    username0: 'santa',
+    username1: 'rudolf',
+    username2: 'mr. grinch',
+}
+//we need to transform the usersnames0, 1
+
+//maps return an array, remeber?
+//we want to change the rudolf name
+
+Object.entries(obj).map(value=>{ 
+    retun value[1] + value[0].replace('username', ''); //value of second item + value of first username repalece username by '' (nothing)
+
+
+})
+
+//ES10
+//.flat() transform varius and inseption array into 1
+
+const array =[1,[2,3],[4,5]]
+array.flat(1) //1 is the number of inside arrays that tis going to flatten
+const entries = ['bob','sally',,,,,'cindy']
+entries.flat() //cleans the entries
+//flatmap
+const jurassicParkChaos = jurassicPark.flatMap (creatue => cretaure + 'TRex')
+const userEmail = '      eddytheeagle@gmail.com'
+const userEmail2 ='jonny@gmail.com       '
+console.log(userEmail.trimStart())
+console.log(userEmail2.trimEnd()) //aviod blank spaces
+
+userprofiles = [['commandeTom', 23],['dereckZlander', 40],['hansel', 18]]; // we have a desorganizated array   
+Object.fromEntries(userprofiles) //transform the array into an object and organizes it
+
+//try/catch allow us to try a piece of  code
+try{
+4+5
+}catch{
+console.log('you messed up')
+}
+
+//loops advanced:
+//1
+const basket = ['apples','oranges','grapes'];
+for ( let i = 0; i < basket.length; i++){
+    console.log(basket[i]);
+}
+//also we can use 
+//2
+basket.forEach(item =>{
+    console.log(item);
+})
+
+//for of
+//we are iterating this array (go back by one and looks for the items)
+for (item of basket) {
+    console.log(item);
+}
+//in strings
+for (item of 'basket') {
+    console.log(item);
+}
+
+//for in (works with object)
+//allows us to loking at the properties
+//enumerating -enumeratin objects
+//so we create an object now
+
+const basket = ['apples','oranges','grapes'];
+const detailedBasket = {
+    apples:5,
+    oreanges:10,
+    grapes: 1000
+}
+
+
+for (item in detailedBasket) {
+    console.log(item);
+}
+//we can make a for in with the basket
+
+for (item in basket) {
+    console.log(item);
+}

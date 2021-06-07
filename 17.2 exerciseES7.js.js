@@ -20,5 +20,6 @@ const cube  = (y) => y**100
 
 // #4) Useing your function from #3, put in the paramter 10000. What is the result?
 infinity
+
 // Research for yourself why you get this result
 
